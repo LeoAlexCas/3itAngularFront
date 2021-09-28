@@ -70,7 +70,7 @@ export class SurveyComponent implements OnInit {
         this.surveyService.createQuiz(this.newSurvey).subscribe(
           res => {
             alert('Enviado!');
-            window.location.href= '/';
+            window.location.href= '/results';
           },
           err => alert('Ha ocurrido un error')
         )
