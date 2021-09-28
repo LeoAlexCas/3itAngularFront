@@ -1,0 +1,30 @@
+<div class="dialogContainer" id="mainContainer">
+    <h2>Encuesta Musical!</h2>
+    <div class="dialogForm form-group">
+        <div class="dialogForm_form">
+            <input id="dialogText" type="text" placeholder="Ingresa Tu mail!" class="textInput form-control" [formControl]="nameField">
+            <p class="alert alert-danger" id="alert" *ngIf="nameField.invalid && nameField.dirty">Porfavor ingresa un mail valido</p>
+        </div>
+    </div>
+    <div class="list-group optionsContainer">
+        <div class="musicOptions">
+            <input type="radio" name="musica" id="rock" class="musicCheck list-group-item" (click)="assignGenre('rock')">
+            <p>Rock</p>
+        </div>
+        <div class="musicOptions">
+            <input type="radio" name="musica" id="jazz" class="musicCheck list-group-item" (click)="assignGenre('jazz')">
+            <p>Jazz</p>
+        </div>
+        <div class="musicOptions">
+            <input type="radio" name="musica" id="metal" class="musicCheck list-group-item" (click)="assignGenre('metal')">
+            <p>Metal</p>
+        </div>
+        <div class="musicOptions">
+            <input type="radio" name="musica" id="salsa" class="musicCheck list-group-item" (click)="assignGenre('salsa')">
+            <p>Salsa</p>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" (click)="sendSurvey()">Enviar!</button>
+</div>
+
