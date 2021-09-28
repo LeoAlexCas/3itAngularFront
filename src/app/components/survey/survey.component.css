@@ -28,6 +28,10 @@
 }
 
 .toResults {
+    margin-left: 10px;
+}
+
+.toResults > a {
     text-decoration: none;
     color: #fff
 }
